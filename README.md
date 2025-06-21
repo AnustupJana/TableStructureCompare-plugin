@@ -29,11 +29,25 @@ The **Table Structure Compare** plugin for QGIS allows users to compare the attr
 - Accessible via the QGIS Processing Toolbox or the plugin's toolbar/menu.
 
 ## Installation
+1. **From QGIS Plugin Repository**:
+   - In QGIS, go to `Plugins > Manage and Install Plugins`.
+  
+     ![Diagram of the System](https://github.com/AnustupJana/TableStructureCompare-plugin/blob/main/doc/1st.png?raw=true)
+   - Search for "Geometry Comparator" in the `All` tab.
+
+     ![Diagram of the System](https://github.com/AnustupJana/TableStructureCompare-plugin/blob/main/doc/2nd.png?raw=true)
+   - Click `Install Plugin`.
+
+1. **From ZIP File**:
+   - Download the plugin ZIP file from the [GitHub Releases](https://github.com/AnustupJana/TableStructureCompare-plugin.git) page.
+   - In QGIS, go to `Plugins > Manage and Install Plugins > Install from ZIP`.
+   - Select the downloaded ZIP file and click `Install Plugin`.
+  
 1. **Download the Plugin**:
    - Clone or download the plugin repository to your local machine.
    - Ensure the folder is named `table_structure_compare`.
 
-2. **Install in QGIS**:
+2. **From Source (for developers)**:
    - Copy the `table_structure_compare` folder to the QGIS plugins directory:
      - Windows: `C:\Users\[Your Username]\AppData\Roaming\QGIS\QGIS3\profiles\default\python\plugins`
      - Linux: `~/.local/share/QGIS/QGIS3/profiles/default/python/plugins`
@@ -54,17 +68,25 @@ The **Table Structure Compare** plugin for QGIS allows users to compare the attr
 1. **Access the Plugin**:
    - Via the **Toolbar**: Click the plugin icon in the QGIS toolbar.
    - Via the **Menu**: Go to `Plugins > Table Structure Compare > Table Structure Compare`.
+
+     ![Diagram of the System](https://github.com/AnustupJana/TableStructureCompare-plugin/blob/main/doc/3rd.png?raw=true)
    - Via the **Processing Toolbox**: Open `Processing > Toolbox`, then find `Vector Analysis > Compare Attribute Table Structure`.
 
-2. **Run the Comparison**:
+1. **Run the Comparison**:
    - In the Processing Toolbox dialog, select:
-     - **Base Vector Layer (Template):** The reference layer.
+     - **Base Vector Layer:** The reference layer.
      - **Compare Vector Layer:** The layer to compare against.
    - Click `Run` to execute the comparison.
+  
+     ![Diagram of the System](https://github.com/AnustupJana/TableStructureCompare-plugin/blob/main/doc/4th.png?raw=true)
 
-3. **View Results**:
-   - If the attribute tables are identical, a popup message will display: "Both table structures are identical."
+2. **View Results**:
+   - If the attribute tables are identical, a message will display:
+  
+     ![Diagram of the System](https://github.com/AnustupJana/TableStructureCompare-plugin/blob/main/doc/5th.png?raw=true)
    - If differences are found, a temporary layer named "Output Difference Table" will be added to the QGIS project, listing all discrepancies.
+  
+     ![Diagram of the System](https://github.com/AnustupJana/TableStructureCompare-plugin/blob/main/doc/6th.png?raw=true)
 
 ## Example
 Given two layers with the following attribute structures:
@@ -78,6 +100,8 @@ Given two layers with the following attribute structures:
   - Field_2: String, length 10
   - Date: Date, length 10
   - Remark: String, length 50
+ 
+  ![Diagram of the System](https://github.com/AnustupJana/TableStructureCompare-plugin/blob/main/doc/7th.png?raw=true)
 - **Compare Layer**:
   - Name: String, length 10
   - UUID: Real, length 10, precision 10
@@ -88,22 +112,25 @@ Given two layers with the following attribute structures:
   - Field_1: String, length 10
   - Date: String, length 50
   - Remarks: String, length 50
+ 
+  ![Diagram of the System](https://github.com/AnustupJana/TableStructureCompare-plugin/blob/main/doc/8th.png?raw=true)
 
 The output table will list differences such as case mismatches (e.g., "Other" vs. "OTHER"), type mismatches (e.g., Integer vs. String), length mismatches, precision mismatches, and order mismatches.
+
+  ![Diagram of the System](https://github.com/AnustupJana/TableStructureCompare-plugin/blob/main/doc/9th.png?raw=true)
 
 ## Development
 - **Source Code**: The plugin is written in Python and uses the QGIS Processing framework.
 - **Contributing**:
   - Fork the repository and submit pull requests for enhancements or bug fixes.
-  - Report issues or feature requests via the repository's issue tracker.
-- **License**: GNU General Public License v2.0 or later.
+  - Report issues or feature requests via the repository's [issue](https://github.com/AnustupJana/TableStructureCompare-plugin/issues) tracker.
+- **License**: GNU General Public License v2.0 or later. See the [LICENSE](https://github.com/AnustupJana/TableStructureCompare-plugin/blob/main/LICENSE) file for details.
 
-## Author
+## Contact
 - **Name**: Anustup Jana
 - **Email**: anustupjana21@gmail.com
-- **Date**: June 17, 2025
+- **GitHub**: [Anustup Jana](https://github.com/AnustupJana)
 
 ## Notes
 - Ensure both input layers are valid vector layers in QGIS.
 - The output layer is temporary and can be saved manually if needed.
-- For custom dialog support (e.g., combo boxes for layer selection), ensure the `table_structure_compare_dialog.py` file defines `baseLayerCombo` and `compareLayerCombo` widgets.
