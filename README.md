@@ -33,7 +33,7 @@ The **Table Structure Compare** plugin for QGIS allows users to compare the attr
    - In QGIS, go to `Plugins > Manage and Install Plugins`.
   
      ![Diagram of the System](https://github.com/AnustupJana/TableStructureCompare-plugin/blob/main/doc/1st.png?raw=true)
-   - Search for "Geometry Comparator" in the `All` tab.
+   - Search for "Table Structure Compare" in the `All` tab.
 
      ![Diagram of the System](https://github.com/AnustupJana/TableStructureCompare-plugin/blob/main/doc/2nd.png?raw=true)
    - Click `Install Plugin`.
