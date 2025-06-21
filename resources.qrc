@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/plugins/table_structure_compare" >
+        <file>icon.png</file>
+    </qresource>
+</RCC>
