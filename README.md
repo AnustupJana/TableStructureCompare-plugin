@@ -38,16 +38,16 @@ The **Table Structure Compare** plugin for QGIS allows users to compare the attr
      ![Diagram of the System](https://github.com/AnustupJana/TableStructureCompare-plugin/blob/main/doc/2nd.png?raw=true)
    - Click `Install Plugin`.
 
-1. **From ZIP File**:
+2. **From ZIP File**:
    - Download the plugin ZIP file from the [GitHub Releases](https://github.com/AnustupJana/TableStructureCompare-plugin.git) page.
    - In QGIS, go to `Plugins > Manage and Install Plugins > Install from ZIP`.
    - Select the downloaded ZIP file and click `Install Plugin`.
   
-1. **Download the Plugin**:
+3. **Download the Plugin**:
    - Clone or download the plugin repository to your local machine.
    - Ensure the folder is named `table_structure_compare`.
 
-2. **From Source (for developers)**:
+4. **From Source (for developers)**:
    - Copy the `table_structure_compare` folder to the QGIS plugins directory:
      - Windows: `C:\Users\[Your Username]\AppData\Roaming\QGIS\QGIS3\profiles\default\python\plugins`
      - Linux: `~/.local/share/QGIS/QGIS3/profiles/default/python/plugins`
@@ -56,11 +56,11 @@ The **Table Structure Compare** plugin for QGIS allows users to compare the attr
      - Go to `Plugins > Manage and Install Plugins`.
      - Select `Install from ZIP` and upload the plugin's ZIP file.
 
-3. **Enable the Plugin**:
+5. **Enable the Plugin**:
    - In QGIS, go to `Plugins > Manage and Install Plugins`.
    - Find `Table Structure Compare` in the `Installed` tab and ensure it is enabled.
 
-4. **Dependencies**:
+6. **Dependencies**:
    - Requires QGIS 3.0 or later.
    - No additional Python packages are required, as it uses QGIS core libraries.
 
@@ -72,7 +72,7 @@ The **Table Structure Compare** plugin for QGIS allows users to compare the attr
      ![Diagram of the System](https://github.com/AnustupJana/TableStructureCompare-plugin/blob/main/doc/3rd.png?raw=true)
    - Via the **Processing Toolbox**: Open `Processing > Toolbox`, then find `Vector Analysis > Compare Attribute Table Structure`.
 
-1. **Run the Comparison**:
+2. **Run the Comparison**:
    - In the Processing Toolbox dialog, select:
      - **Base Vector Layer:** The reference layer.
      - **Compare Vector Layer:** The layer to compare against.
@@ -80,7 +80,7 @@ The **Table Structure Compare** plugin for QGIS allows users to compare the attr
   
      ![Diagram of the System](https://github.com/AnustupJana/TableStructureCompare-plugin/blob/main/doc/4th.png?raw=true)
 
-2. **View Results**:
+3. **View Results**:
    - If the attribute tables are identical, a message will display:
   
      ![Diagram of the System](https://github.com/AnustupJana/TableStructureCompare-plugin/blob/main/doc/5th.png?raw=true)
